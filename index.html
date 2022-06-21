@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Login Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Assistant:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="./assets/css/normalize.min.css">
+  <link rel='stylesheet' href='./assets/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='./assets/css/dataTables.bootstrap.min.css'>
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+
+  <style>
+    body {
+      background-image: url("./assets/img/bg.jpg");
+
+
+      
+    }
+    
+  </style>
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="login">
+    <div class="form">
+      <form action="./summery.html" method="post" class="login-form">
+        <span class="material-icons">lock</span>
+        <input type="text" placeholder="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          required />
+        <input type="password" placeholder="password" name="pass" required />
+        <input type="submit" class="styles" name="submit" value="login">
+      </form>
+    </div>
+  </div>
+  <!-- partial -->
+
+</body>
+
+</html>

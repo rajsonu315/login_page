@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+/* ////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+table filter ////////////////////////////////
+////////////////////////////////
+////////////////////////////////
+/////////////////////////////// */
+
+
+
+
+
+/* ///////////////////////////////////////
+/////////////////////////////////////
+////////////////////////////////////////////////
+//////////////////////////////// */
+
+.login {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+  font-family: 'Comfortaa', cursive;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  border-radius: 10px;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+}
+
+.form input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'Comfortaa', cursive;
+}
+
+.form input:focus {
+  background: #dbdbdb;
+}
+
+.form .styles {
+  font-family: 'Comfortaa', cursive;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4b6cb7;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form button:active {
+  background: #395591;
+}
+
+.form span {
+  font-size: 75px;
+  color: #4b6cb7;
+}
+
+/* //////////////////////
+//////////////////////////
+////////////////////////////// */
+
+.primary {
+  color: #22b024 !important;
+}
+
+.primary-bg {
+  background-color: #22b024 !important;
+}
+
+.secondary {
+  color: #22b024 !important;
+}
+
+.secondary-bg {
+  background-color: #22b024 !important;
+}
+
+.inactive {
+  color: #eaeaea !important;
+}
+
+.inactive-bg {
+  background-color: #eaeaea !important;
+}
+
+.green {
+  color: #22b024 !important;
+}
+
+.green-bg {
+  background-color: #22b024 !important;
+}
+
+.orange {
+  color: #e26c23 !important;
+}
+
+.orange-bg {
+  background-color: #e26c23 !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+  font-family: "Assistant", sans-serif;
+}
+
+.colours {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.colours p {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.colours p:last-child {
+  margin-right: 0;
+}
+
+.admin-panel {
+  display: flex;
+}
+
+.menu {
+  border-radius: 7.5px;
+  background: -webkit-linear-gradient(-45deg, #56cdc3 0%, #56cdc3 100%);
+  min-height: calc(100vh - 40px);
+  padding: 15px 15px 0;
+  width: 50px;
+  transition: width 0.25s;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.menu.active {
+  width: 200px;
+}
+
+.menu.active .heading p {
+  opacity: 1;
+}
+
+.menu.active .wrap {
+  opacity: 1;
+  height: auto;
+}
+
+.menu.active .menu-icon span {
+  transform: rotateY(90deg);
+}
+
+.menu.active .menu-icon span:first-child {
+  transform: rotate(-45deg);
+}
+
+.menu.active .menu-icon span:last-child {
+  transform: rotate(45deg);
+}
+
+.menu.active .menu-icon span:first-child {
+  top: 0;
+}
+
+.menu.active .menu-icon span:last-child {
+  top: 2px;
+}
+
+.menu .wrap {
+  min-width: calc(200px - 30px);
+  opacity: 0;
+  transition: width 0.25s, opacity 0.25s;
+  height: 0;
+  overflow: hidden;
+}
+
+.menu .heading {
+  padding: 0 0 15px;
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.menu .heading p {
+  transition: opacity 0.25s;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.menu .heading .menu-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  height: 14px;
+  width: 20px;
+}
+
+.menu .heading .menu-icon span {
+  transition: transform 0.25s, right 0.25s;
+}
+
+.menu .heading .menu-icon span:first-child {
+  transform-origin: top right;
+}
+
+.menu .heading .menu-icon span:last-child {
+  transform-origin: bottom right;
+}
+
+.menu .heading .menu-icon span:first-child, .menu .heading .menu-icon span:last-child {
+  position: relative;
+  right: 3px;
+}
+
+.menu .heading .menu-icon p {
+  margin: 0;
+  padding: 0;
+}
+
+.menu .heading .menu-icon span {
+  width: 100%;
+  height: 2px;
+  display: block;
+  margin-bottom: 4px;
+  background-color: white;
+}
+
+.menu .dropdown {
+  position: relative;
+}
+
+.menu .dropdown p {
+  cursor: pointer;
+}
+
+.menu .dropdown:before {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border-top: 5px solid transparent;
+  border-left: 8px solid white;
+  border-bottom: 5px solid transparent;
+  content: "";
+  transition: transform 0.25s;
+}
+
+.menu .dropdown.js-opened:before {
+  transform: rotate(90deg);
+}
+
+.menu .dropdown a {
+  margin-left: 10px;
+}
+
+.menu .dropdown+a {
+  margin-top: 0;
+}
+
+.menu .dropdown+.title {
+  margin-top: 5px;
+}
+
+.menu .dropdown .links {
+  overflow: hidden;
+}
+
+.menu .dropdown .links a {
+  position: relative;
+  padding-left: 10px;
+  z-index: 1;
+}
+
+.menu .dropdown .links a:before {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 2px);
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 4px;
+  transition: background-color 0.25s, border-radius 0.25s, width 0.25s, height 0.25s, top 0.25s;
+}
+
+.menu .dropdown .links a:hover:before {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.menu .title {
+  color: rgba(255, 255, 255, 0.75);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu p {
+  cursor: default;
+}
+
+.menu a, .menu p {
+  margin: 5px 0;
+  padding: 5px 0;
+  display: block;
+  color: white;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.content {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 0;
+  margin-left: 0px;
+  border-radius: 7.5px;
+  overflow: hidden;
+}
+
+.content .header {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 10px 20px;
+  background: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.content .header p, .content .header a {
+  margin: 5px 0;
+  color: #22b024;
+}
+
+.content .header p {
+  margin-right: 10px;
+}
+
+.content .header a {
+  color: #22b024;
+}
+
+.content .body {
+  padding: 20px;
+  width: 100%;
+  background: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.1) 100%);
+  height: 100%;
+}
+
+.content .body .heading {
+  width: 100%;
+  margin-top: 0;
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: bold;
+  color: #22b024;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #22b024;
+  text-decoration-color: #22b024;
+}
+
+.content .body .page-heading {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.content .body .page-heading .title {
+  font-size: 25px;
+  line-height: 30px;
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.content .body .page-heading .actions .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  min-width: 100px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 10px;
+  margin-left: 15px;
+}
+
+.content .body .tab-title {
+  background-color: #56cdc3;
+  width: 100%;
+  text-align: center;
+  padding: 10px 5px;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.content .body .tabs {
+  width: 100%;
+  display: flex;
+}
+
+.content .body .tabs .tab {
+  flex: 1 0 0;
+  margin-bottom: 20px;
+  background-color: #eaeaea;
+  color: #b2b2b2;
+  text-align: center;
+  overflow: hidden;
+  padding: 10px 5px;
+  cursor: pointer;
+}
+
+.content .body .tabs .tab:first-child {
+  border-bottom-left-radius: 5px;
+}
+
+.content .body .tabs .tab:last-child {
+  border-bottom-right-radius: 5px;
+}
+
+.content .body .tabs .tab.active {
+  background-color: #22b024;
+  color: white;
+}
+
+.content .body .fields {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -20px;
+}
+
+.content .body .fields .field {
+  margin-right: 20px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .content .body .fields .field {
+    width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 991px) {
+  .content .body .fields .field {
+    width: calc(50% - 20px);
+  }
+}
+
+.content .body .fields .field.required label:after {
+  content: "*";
+  margin-left: 2px;
+  color: red;
+}
+
+.content .body .fields .field .info {
+  display: none;
+}
+
+.content .body .fields .field.has-info label {
+  width: 125px;
+}
+
+.content .body .fields .field.has-info input {
+  width: calc(100% - 165px);
+}
+
+.content .body .fields .field.has-info .info {
+  display: block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  font-style: italic;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #22b024;
+  border-radius: 50%;
+  color: white;
+}
+
+.content .body .fields .field label {
+  width: 125px;
+}
+
+.content .body .fields .field input {
+  width: calc(100% - 125px);
+  height: 35px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.content .body .split {
+  margin-right: -20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content .body .split .col {
+  width: calc(50% - 20px);
+  margin-right: 20px;
+}
+
+.content .body .split .col .fields {
+  flex-direction: column;
+  margin-right: 0;
+}
+
+.content .body .split .col .fields .field {
+  width: 100%;
+  margin-right: 0;
+}
